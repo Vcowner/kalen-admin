@@ -3,8 +3,9 @@
  * @Description: 入口页
  * @Date: 2024-04-15 17:03:45
  * @LastEditors: liaokt
- * @LastEditTime: 2024-04-15 17:21:03
+ * @LastEditTime: 2024-04-29 17:37:43
  */
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -22,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AntdRegistry>{children}</AntdRegistry>
+      </body>
     </html>
   );
 }
