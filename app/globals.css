@@ -5,13 +5,43 @@
 .not_found {
   height: 100vh;
   width: 100vw;
-  background-image: url("../public/imgs/not_found.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #1d3f8a;
 
   display: flex;
-  justify-content: center;
-  align-items: end;
+
+  flex-direction: column;
+
+  align-items: center;
 
   padding-bottom: 22vh;
+}
+
+.not_found .img_404 {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+}
+
+.not_found .text_404 {
+  position: relative;
+  top: -5vh;
+  width: 100vw;
+  height: 20vh;
+}
+
+.not_found .button_404 {
+  height: 6vh;
+  margin-left: 1vw;
+}
+
+@media screen and (min-width: 375px) {
+  .not_found .button_404 {
+    margin-left: 1vw; /* 在宽度至少为 768px 的屏幕上 */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .not_found .button_404 {
+    margin-left: 2vw; /* 在宽度最大为 375px 的屏幕上 */
+  }
 }
